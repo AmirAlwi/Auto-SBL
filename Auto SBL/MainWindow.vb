@@ -3,7 +3,7 @@ Public Class MainWindow
 
     Private Sub MainWindow_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
-        ''this is program routine section
+
         Label4.Text = "V 4.0"
 
         Dim read As String = vbNullString
@@ -185,6 +185,5 @@ Public Class MainWindow
     Private Sub ForceProcess_CheckedChanged(sender As Object, e As EventArgs) 
 
     End Sub
-
 End Class
 
