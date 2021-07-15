@@ -80,7 +80,7 @@ Public Class MainWindow
                 tempS = ""
             End If
 
-            searchname = "*" & tempS & "*"
+            searchname = "*" & tempS & "_*"
 
             'LOG 1
             wrtlog(vbNewLine &
@@ -156,6 +156,11 @@ Public Class MainWindow
 
             CheckBox1.Visible = True
             ForceProcess.Visible = True
+
+        ElseIf (e.KeyCode And Not Keys.Modifiers) = Keys.F4 AndAlso e.Modifiers = Keys.Control Then
+
+            CheckBox1.Visible = False
+            ForceProcess.Visible = False
 
         End If
     End Sub

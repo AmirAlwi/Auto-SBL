@@ -46,10 +46,12 @@
 
         ' auto selection
         If name <> "**" And ListBox.Items.Count > 0 Then
-            AutoSelect(name, storeloca, lengthofloc, y)
+            AutoSelect(name, storeloca, lengthofloc, y) ' y is file quantity
 
             If MainWindow.CheckBox1.Checked Then
-                MsgBox(ListBox.SelectedItems.Count & " file selected")
+                'MsgBox(ListBox.SelectedItems.Count & " file selected")
+                Form1.Show()
+                Form1.Label1.Text = ListBox.SelectedItems.Count & " file selected"
                 Me.Sel_Click(Me, EventArgs.Empty) 'call after auto selec function
             End If
         End If

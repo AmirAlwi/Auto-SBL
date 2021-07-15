@@ -114,6 +114,12 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="DataClass.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ProgTesting.vb" />
     <Compile Include="SBLBrowse.Designer.vb">
       <DependentUpon>SBLBrowse.vb</DependentUpon>
@@ -155,6 +161,9 @@
     <Compile Include="Summary.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SBLBrowse.resx">
       <DependentUpon>SBLBrowse.vb</DependentUpon>
     </EmbeddedResource>

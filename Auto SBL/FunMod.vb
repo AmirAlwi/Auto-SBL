@@ -111,14 +111,14 @@
                             CGate = False
                         End If
 
-                        Gate *= CGate
+                        'Gate *= CGate ' unessesary thing
 
-                        If Gate = True And m = y Then
+                        If CGate = True And m = y Then
 
                             Search_Result.ListBox.SetSelected(n, True)
                             Exit For
-                            Exit For
-                        ElseIf Gate = False And n = y - 1 Then
+                            'Exit For ' unessasary
+                        ElseIf CGate = False And n = y - 1 Then
 
                             Search_Result.ListBox.SetSelected(m, True)
                         End If
@@ -127,7 +127,7 @@
                         If CLatest = False And y = m Then
                             Search_Result.ListBox.SetSelected(n, True)
                             Search_Result.ListBox.SetSelected(m, True)
-                        ElseIf CLatest = False Then
+                        ElseIf CLatest = False Then ' not really important
                             Search_Result.ListBox.SetSelected(n, True)
                         End If
                     End If
