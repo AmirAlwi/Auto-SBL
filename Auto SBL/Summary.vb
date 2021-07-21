@@ -117,7 +117,7 @@
         End Try
 
         Dim count As Integer = 0
-        For i As Integer = 0 To 299
+        For i As Integer = 0 To 29999
 
             If SftwBin(i).Parts > 0 Then
                 SftwBin(i).total = SftwBin(i).Parts / QtyTested * 100

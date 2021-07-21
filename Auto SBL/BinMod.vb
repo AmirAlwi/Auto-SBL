@@ -2,7 +2,7 @@
 
     Dim retestqty As Integer = 0
     Dim RawHrdwBin(10, 20) As ClassData
-    Dim RawSftwBin(10, 300) As ClassData
+    Dim RawSftwBin(10, 30000) As ClassData
 
     Public Sub ProcessBinD(BinLine As Integer, lines() As String, Index As Integer)
         ''''''''' log 5 bin data process ''''''''''''''")
@@ -71,7 +71,7 @@
 
             If temp(1) = "N/A" Then
 
-                RawSftwBin(index, i - startline) = New ClassData(299, "N/A - error",
+                RawSftwBin(index, i - startline) = New ClassData(29999, "N/A - error",
                                           Convert.ToInt32(temp(2)), Convert.ToDecimal(temp(3)))
             ElseIf temp.Length = 5 Then
 
@@ -97,7 +97,7 @@
             Case "1A", "2A"
                 For i As Integer = startline To Sortline - 1
 
-                    For j As Integer = 0 To 299
+                    For j As Integer = 0 To 29999
                         ''continue here
                         Try
                             If RawSftwBin(index, i - startline).Bin = SftwBin(j).Bin Then
@@ -145,7 +145,7 @@
         Dim LSplit As Integer = Convert.ToInt32(SumC.Remove(1, 1)) 'give sequence of code
 
         If LSplit = 1 Then 'reset bin 2,3,4
-            For i As Integer = 1 To 299 ' sortdatactf1(1) is for bin 1 
+            For i As Integer = 1 To 29999 ' sortdatactf1(1) is for bin 1 
                 SftwBin(i) = New ClassData(i + 1, String.Empty, 0, 0)
             Next
         End If

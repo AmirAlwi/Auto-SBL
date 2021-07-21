@@ -6,12 +6,12 @@
     Public LotTotal As Integer = 0
     Public QtyTested As Integer = 0
     Public HrdwBin(5) As ClassData
-    Public SftwBin(300) As ClassData
+    Public SftwBin(30000) As ClassData
     Public SummaryContent() As String
     Public Maininfo(10, 30) As String
     Public LotInfoLoc(8) As Integer
     Public CodeLoc(3) As Integer
-    Public SortLoc(300) As Integer
+    Public SortLoc(30000) As Integer
 
     Public Function WriteReadtxt(sel As Integer,
                                  path As String,
@@ -336,7 +336,7 @@
 
         HrdwBin(4) = New ClassData(5, String.Empty, 0, 0)
 
-        For i As Integer = 0 To 299
+        For i As Integer = 0 To 29999
 
             SftwBin(i) = New ClassData(i + 1, String.Empty, 0, 0)
 
@@ -350,8 +350,8 @@
         LotTotal = 0
         QtyTested = 0
 
-        Array.Resize(SortLoc, 300)
-        For i As Integer = 0 To 299
+        Array.Resize(SortLoc, 30000)
+        For i As Integer = 0 To 29999
             SortLoc(i) = 0
         Next
 
