@@ -3,13 +3,13 @@
     Private Sub WBR_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WBR.DocumentCompleted
 
         ''''''''''' Log 8 SBL insert ''''''''''''''")
-        If WBR.Url = New Uri("http://penengweb/test/mpr/Engineering/SBL/SBL.html") Then
+        If WBR.Url = New Uri("HomeURL") Then
 
             LoadB = True
             Sblinfo()
             LoadB = True 'place here allowed back
 
-        ElseIf WBR.Url = New Uri("http://penengweb/test/mpr/Engineering/SBL/SBL1.asp") Then
+        ElseIf WBR.Url = New Uri("Page 1") Then
 
             Dim reply As String = WBR.DocumentText.Remove(51)
 
@@ -22,7 +22,7 @@
                 SbldataHB()
             End If
 
-        ElseIf WBR.Url = New Uri("http://penengweb/test/mpr/Engineering/SBL/SBL2.asp") Then
+        ElseIf WBR.Url = New Uri("Page 2") Then
 
             Dim webreply As String = WBR.DocumentText
             Dim cutreply As String = webreply.Remove(31)
